@@ -40,6 +40,7 @@ from streamlit_folium import st_folium
 # -----------------------------
 
 API_TOKEN = st.secrets["API_KEY"]
+st.write(API_TOKEN)
 
 # -----------------------------
 # STREAMLIT UI
@@ -115,7 +116,12 @@ if st.button("Get Air Quality"):
         ).add_to(m)
 
         # Display map
-        st_folium(m, width=700, height=500)
+        st_folium(
+         m,
+         width=700,
+         height=500,
+         returned_objects=[]
+        )
 
     else:
         st.error("City not found or API issue.")
