@@ -40,7 +40,6 @@ from streamlit_folium import st_folium
 # -----------------------------
 
 API_TOKEN = st.secrets["API_KEY"]
-st.write(API_TOKEN)
 
 # -----------------------------
 # STREAMLIT UI
